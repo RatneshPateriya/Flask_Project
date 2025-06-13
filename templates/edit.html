@@ -2,34 +2,34 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Student Information</title>
+    <title>Edit Student Information</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #eef2f3;
+            background-color: #f2f2f2;
             padding: 40px;
         }
         form {
             background-color: white;
             padding: 25px;
-            border-radius: 8px;
+            border-radius: 10px;
             max-width: 400px;
             margin: auto;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
         }
         h2 {
             text-align: center;
-            color: #333;
+            color: #444;
         }
         label {
-            display: block;
             margin-top: 15px;
+            display: block;
             font-weight: bold;
         }
         input, textarea {
             width: 100%;
             padding: 8px;
-            margin-top: 5px;
+            margin-top: 6px;
             box-sizing: border-box;
         }
         .buttons {
@@ -44,8 +44,8 @@
             font-weight: bold;
             cursor: pointer;
         }
-        .submit-btn {
-            background-color: #007bff;
+        .update-btn {
+            background-color: #28a745;
             color: white;
         }
         .cancel-btn {
@@ -56,23 +56,24 @@
 </head>
 <body>
 
-    <form action="/submit" method="POST">
-        <h2>Student Information</h2>
+    <form action="/update" method="POST">
+        <h2>Edit Student Information</h2>
 
         <label for="name">Name:</label>
-        <input type="text" id="name" name="name" required>
+        <input type="text" id="name" name="name" value="" required>
 
-        <label for="roll">Roll Number:</label>
-        <input type="text" id="roll" name="roll" required>
+        <label for="roll">Roll No.:</label>
+        <input type="text" id="roll" name="roll" value="" required>
 
         <label for="address">Address:</label>
-        <textarea id="address" name="address" rows="4" required></textarea>
+        <textarea id="address" name="address" rows="" required></textarea>
 
         <div class="buttons">
-            <input type="submit" value="Submit" class="submit-btn">
+            <input type="submit" value="Update" class="update-btn">
             <input type="reset" value="Cancel" class="cancel-btn">
         </div>
     </form>
 
 </body>
 </html>
+
